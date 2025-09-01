@@ -1,4 +1,4 @@
-import 'package:cached_video_player_plus/util/migration_utils.dart';
+// import 'package:cached_video_player_plus/util/migration_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player_media_kit/video_player_media_kit.dart';
 
@@ -12,7 +12,7 @@ void main() async {
 
   // Migrate cached video data from get_storage to shared_preferences
   // This should be called ONCE before removing get_storage dependency
-  await migrateCachedVideoDataToSharedPreferences();
+  // await migrateCachedVideoDataToSharedPreferences();
 
   // Windows and Linux support using `video_player_media_kit` plugin
   VideoPlayerMediaKit.ensureInitialized(windows: true, linux: true);
