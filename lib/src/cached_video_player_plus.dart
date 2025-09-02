@@ -6,7 +6,6 @@ import 'package:video_player/video_player.dart';
 
 import 'cache_key_helpers.dart';
 import 'video_cache_manager.dart';
-import 'video_player_storage.dart';
 import 'i_video_player_storage.dart';
 
 /// A video player that wraps [VideoPlayerController] with intelligent
@@ -404,11 +403,8 @@ class CachedVideoPlayerPlus {
   /// The globally used cache manager for video file caching operations.
   static CacheManager cacheManager = defaultCacheManager;
 
-  /// Default storage for cache metadata and expiration timestamps.
-  static final defaultMetadataStorage = VideoPlayerMetadataStorage();
-
   /// The globally used storage for video file metadata.
-  static IVideoPlayerMetadataStorage metadataStorage = defaultMetadataStorage;
+  static late IVideoPlayerMetadataStorage metadataStorage;
 
   /// Removes the cached file for the specified [url] from the cache.
   ///
